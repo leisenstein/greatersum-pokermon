@@ -26,8 +26,7 @@ The output will be the string of the best hand.  In case of a tie, return the st
   * Check validity of card
   * Check validity of hand
   * Compare hands....
-<br />
-
+<br /><br />
 
 
 # Further Exercises
