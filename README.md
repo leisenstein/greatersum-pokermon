@@ -21,7 +21,7 @@ The input will be two strings, each representing a 5-card hand of poker.
 The output will be the string of the best hand.  In case of a tie, return the string "TIE".
 <br /><br />
 
-
+**Tests**
 * Get All Tests to Pass  
   * Check validity of card
   * Check validity of hand
