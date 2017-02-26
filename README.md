@@ -31,10 +31,10 @@ The output will be the string of the best hand.  In case of a tie, return the st
 
 # Further Exercises
 
-* Refactor to become more Object Oriented**
+* Refactor to become more Object Oriented
   * Interface/Abstract
 
-* Implement Design Patterns**
+* Implement Design Patterns
   * Repository
   
 
