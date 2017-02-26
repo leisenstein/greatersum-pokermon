@@ -19,27 +19,29 @@ The input will be two strings, each representing a 5-card hand of poker.
 **Output**
 
 The output will be the string of the best hand.  In case of a tie, return the string "TIE".
+<br /><br />
 
 
-
-
-
-# Get All Tests to Pass  
-
+* Get All Tests to Pass  
+  * Check validity of card
+  * Check validity of hand
+  * Compare hands....
+<br />
 
 
 
 # Further Exercises
 
-**Refactor to become more Object Oriented**
+* Refactor to become more Object Oriented**
+  * Interface/Abstract
 
+* Implement Design Patterns**
+  * Repository
+  
 
-**Implement Design Patterns**
-
-
-
+<br /><br />
 # Notes
-# [Git](git_instructions.md)
+* [Git](git_instructions.md)
 
 
 
