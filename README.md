@@ -41,7 +41,7 @@ The output will be the string of the best hand.  In case of a tie, return the st
 
 <br /><br />
 # Notes
-* [Git](git_instructions.md)
+* [Git instructions (Optional)](git_instructions.md)
 
 
 
