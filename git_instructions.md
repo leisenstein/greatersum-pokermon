@@ -1,5 +1,8 @@
 # Getting Started in Git
 
+> These are instructions to start the project using GitHub.
+<br /><br />
+
 1. ```D:```
 2. ```mkdir greatersum```
 3. ```cd mkdir```
