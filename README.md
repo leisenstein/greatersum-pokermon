@@ -41,6 +41,7 @@ The output will be the string of the best hand.  In case of a tie, return the st
   * Dependency Injection
   * Decorator
   * Singleton
+  * CQRS
   * [Rules Design Pattern] (http://www.michael-whelan.net/rules-design-pattern/)
   * SOLID principles
   
