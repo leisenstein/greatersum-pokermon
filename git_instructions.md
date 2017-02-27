@@ -26,3 +26,5 @@
 18. ```git pull``` (to pull the changes down you made on the site)
 
 
+<br /><br /><br />
+[Notes on git remote](http://stackoverflow.com/questions/5617211/what-is-git-remote-add-and-git-push-origin-master)
