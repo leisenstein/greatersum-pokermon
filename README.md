@@ -11,8 +11,8 @@ This program will compare two poker hands and pick the best one according to the
 The input will be two strings, each representing a 5-card hand of poker.
 
 * Each card is represented by a 2 char string
-  * Suit: H, D, S, C (Heart, Diamonds, Spades, Clubs) 
   * Rank: 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
+  * Suit: H, D, S, C (Heart, Diamonds, Spades, Clubs) 
 * Each hand is represented by 5 cards, seperated by a space
   * "4H 4S 4D 9S 9D" or "4D 4S 4H QS KS"
 
