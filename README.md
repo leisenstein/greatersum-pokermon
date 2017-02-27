@@ -33,10 +33,14 @@ The output will be the string of the best hand.  In case of a tie, return the st
 # Further Exercises
 
 * Refactor to become more Object Oriented
-  * Interface/Abstract
+  * Interface/Abstract (ex: IHand interface)
+  * Encapsulation
 
-* Implement Design Patterns
+* Implement Design Patterns & Principles
   * Repository
+  * Dependency Injection
+  * Singleton
+  * SOLID principles
   
 
 <br /><br />
