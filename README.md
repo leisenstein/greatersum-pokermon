@@ -39,6 +39,7 @@ The output will be the string of the best hand.  In case of a tie, return the st
 * Implement Design Patterns & Principles
   * Repository
   * Dependency Injection
+  * Decorator
   * Singleton
   * [Rules Design Pattern] (http://www.michael-whelan.net/rules-design-pattern/)
   * SOLID principles
