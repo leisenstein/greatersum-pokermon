@@ -39,54 +39,58 @@ namespace PokermonTest
             Assert.That(poker.BestHands(new[] { nothing, pairOf4 }), Is.EqualTo(pairOf4));
         }
 
-        [Ignore("Remove to run test")]
+
         [Test]
         public void Two_pairs()
         {
             Poker poker = new Poker();
             const string pairOf2 = "4S 2H 6S 2D JH";
             const string pairOf4 = "2S 4H 6S 4D JH";
+            const string TIE = "TIE";
             // Assert.That(poker.BestHands(new[] { pairOf2, pairOf4 }), Is.EqualTo(pairOf4));
+            Assert.That(poker.BestHands(new[] { pairOf2, pairOf4 }), Is.EqualTo(TIE));
         }
 
-        [Ignore("Remove to run test")]
+
         [Test]
         public void One_pair_vs_double_pair()
         {
             Poker poker = new Poker();
             const string pairOf8 = "2S 8H 6S 8D JH";
             const string doublePair = "4S 5H 4S 8D 5H";
-            // Assert.That(poker.BestHands(new[] { pairOf8, doublePair }), Is.EqualTo(doublePair));
+            Assert.That(poker.BestHands(new[] { pairOf8, doublePair }), Is.EqualTo(doublePair));
         }
 
-        [Ignore("Remove to run test")]
+        
         [Test]
         public void Two_double_pairs()
         {
             Poker poker = new Poker();
             const string doublePair2And8 = "2S 8H 2S 8D JH";
             const string doublePair4And5 = "4S 5H 4S 8D 5H";
+            const string TIE = "TIE";
             // Assert.That(poker.BestHands(new[] { doublePair2And8, doublePair4And5 }), Is.EqualTo(doublePair2And8));
+            Assert.That(poker.BestHands(new[] { doublePair2And8, doublePair4And5 }), Is.EqualTo(TIE));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Double_pair_vs_three()
         {
             Poker poker = new Poker();
             const string doublePair2And8 = "2S 8H 2S 8D JH";
             const string threeOf4 = "4S 5H 4S 8D 4H";
-            // Assert.That(poker.BestHands(new[] { doublePair2And8, threeOf4 }), Is.EqualTo(threeOf4));
+            Assert.That(poker.BestHands(new[] { doublePair2And8, threeOf4 }), Is.EqualTo(threeOf4));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Two_threes()
         {
             Poker poker = new Poker();
             const string threeOf2 = "2S 2H 2S 8D JH";
             const string threeOf1 = "4S AH AS 8D AH";
-            // Assert.That(poker.BestHands(new[] { threeOf2, threeOf1 }), Is.EqualTo(threeOf1));
+            const string TIE = "TIE";
+            // Assert.That(poker.BestHands(new[] { threeOf2, threeOf1 }), Is.EqualTo(threeOf2));
+            Assert.That(poker.BestHands(new[] { threeOf2, threeOf1 }), Is.EqualTo(TIE));
         }
 
         [Ignore("Remove to run test")]
@@ -163,14 +167,15 @@ namespace PokermonTest
             // Assert.That(poker.BestHands(new[] { full, squareOf3 }), Is.EqualTo(squareOf3));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Two_squares()
         {
             Poker poker = new Poker();
             const string squareOf2 = "2S 2H 2S 8D 2H";
             const string squareOf5 = "4S 5H 5S 5D 5H";
+            const string TIE = "TIE";
             // Assert.That(poker.BestHands(new[] { squareOf2, squareOf5 }), Is.EqualTo(squareOf5));
+            Assert.That(poker.BestHands(new[] { squareOf2, squareOf5 }), Is.EqualTo(TIE));
         }
 
         [Ignore("Remove to run test")]

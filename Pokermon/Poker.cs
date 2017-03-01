@@ -48,11 +48,16 @@ namespace Pokermon
 
         public HandRank DetermineHand(string pokerHand)
         {
-            
+            // MUST REMAIN IN ORDER, BEST TO WORST FOR SHORT CIRCUIT TO WORK   
             if(IsFourOfAKind(pokerHand))
                 return HandRank.FourOfAKind;
+            if(IsThreeOfAKind(pokerHand))
+                return HandRank.ThreeOfAKind;
+            else if (IsTwoPair(pokerHand))
+                return HandRank.TwoPair;
             else if(IsOnePair(pokerHand))
                 return HandRank.OnePair;
+            
 
             return HandRank.Nothing;
 
@@ -77,6 +82,27 @@ namespace Pokermon
             return result;
         }
 
+        private bool IsTwoPair(string hand)
+        {
+            string[] cards = hand.Split(' ');
+            bool result = false;
+            Dictionary<char, int> cardRankToCountMap = new Dictionary<char, int>();
+            foreach (var card in cards)
+            {
+                if (cardRankToCountMap.ContainsKey(card[0]))
+                    cardRankToCountMap[card[0]]++;
+                else
+                    cardRankToCountMap.Add(card[0], 1);
+            }
+            
+            if (cardRankToCountMap.Where(x=>x.Value == 2).Count() == 2)
+                result = true;
+
+            return result;
+        }
+
+
+
         public bool IsFourOfAKind(string hand)
         {
             string[] cards = hand.Split(' ');
@@ -97,7 +123,69 @@ namespace Pokermon
 
         }
 
+        public bool IsThreeOfAKind(string hand)
+        {
+            string[] cards = hand.Split(' ');
+            bool result = false;
+            Dictionary<char, int> cardRankToCountMap = new Dictionary<char, int>();
+            foreach (var card in cards)
+            {
+                if (cardRankToCountMap.ContainsKey(card[0]))
+                    cardRankToCountMap[card[0]]++;
+                else
+                    cardRankToCountMap.Add(card[0], 1);
+            }
 
+            if (cardRankToCountMap.Any(x => x.Value == 3))
+                result = true;
+
+            return result;
+
+        }
+
+        public bool IsFiveOfAKind(string hand)
+        {
+            string[] cards = hand.Split(' ');
+            bool result = false;
+            Dictionary<char, int> cardRankToCountMap = new Dictionary<char, int>();
+            foreach (var card in cards)
+            {
+                if (cardRankToCountMap.ContainsKey(card[0]))
+                    cardRankToCountMap[card[0]]++;
+                else
+                    cardRankToCountMap.Add(card[0], 1);
+            }
+
+            if (cardRankToCountMap.Any(x => x.Value == 5))
+                result = true;
+
+            return result;
+
+        }
+
+        public bool IsStraight(string hand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsFlush(string hand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsFullHouse(string hand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsStraightFlush(string hand)
+        {
+            throw new NotImplementedException();
+        }
+        public bool IsRoyalFlush(string hand)
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }
