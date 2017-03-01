@@ -25,6 +25,14 @@
 17. Modify README.md directly from the GitHub.com website
 18. ```git pull``` (to pull the changes down you made on the site)
 
+----
+
+Git Create Branches
+<br /><br />
+
+1. ```git checkout -b newBranchName``` // Create and Checkout new branch
+2. ```git push -u origin newBranchName```  // Push new branch to remote repo
 
 <br /><br /><br />
 [Notes on git remote](http://stackoverflow.com/questions/5617211/what-is-git-remote-add-and-git-push-origin-master)
+[Create remote branch](http://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch)
