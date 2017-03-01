@@ -22,6 +22,31 @@ namespace Pokermon
             Nothing = 9
         }
 
+        public enum Suit
+        {
+            Hearts = 'H',
+            Diamonds = 'D',
+            Clubs = 'C',
+            Spades = 'S'
+        }
+
+        public enum Rank
+        {
+            Two = 2,
+            Three = 3,
+            Four = 4,
+            Five = 5,
+            Six = 6,
+            Seven = 7,
+            Eight = 8,
+            Nine = 9,
+            Ten = 10,
+            Jack = 11,
+            Queen = 12,
+            King = 13,
+            Ace = 14
+        }
+
         public string BestHands(string[] hands)
         {
             if(hands.Length < 1)
@@ -165,6 +190,33 @@ namespace Pokermon
 
         public bool IsStraight(string hand)
         {
+            // 5 #s in a row, MaxRank 10, no duplicates
+            string[] cards = hand.Split(' ');
+            bool result = false;
+            Dictionary<char, int> cardRankToCountMap = new Dictionary<char, int>();
+            foreach (var card in cards)
+            {
+                if (cardRankToCountMap.ContainsKey(card[0]))
+                    cardRankToCountMap[card[0]]++;
+                else
+                    cardRankToCountMap.Add(card[0], 1);
+            }
+            
+
+            if (cardRankToCountMap.Any(x => x.Value > 1))
+                return false;
+
+            var royalRank = new List<char>() {'J', 'Q', 'K', 'A'};
+            foreach (var key in cardRankToCountMap.Keys)
+            {
+                if (royalRank.Contains(key))
+                    return false;
+            }
+            
+            // How to determine 5 in a row?
+            var highestRank = cardRankToCountMap.Keys.Max(x => x);
+            var lowestRank = cardRankToCountMap.Keys.Min(x => x);
+
             throw new NotImplementedException();
         }
 
